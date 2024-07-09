@@ -19,7 +19,7 @@ class CounterComponent extends Component {
   }
 
   render() {
-    return `
+    return html`
       <h1>Counter</h1>
       <p>Count: ${state.getState().count}</p>
       <button onclick="counter.decrease()">-</button>
