@@ -6,7 +6,9 @@ class ReactiveComponent {
   }
 
   initState() {
-    return {};
+    return {
+      // Initialize state properties here
+    };
   }
 
   setState(newState) {
