@@ -14,6 +14,8 @@ class Counter extends ReactiveComponent {
   }
 
   render() {
+    this.removeEventListeners();
+
     const template = `
       <div>
         <h1>Count: ${this.state.count}</h1>
