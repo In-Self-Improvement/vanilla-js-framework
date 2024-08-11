@@ -6,10 +6,7 @@ export const request = async () => {
   try {
     if (res) {
       let data = await res.json();
-      data.photos.forEach((elm) => {
-        template += `<img src="${elm.url}"></img>`;
-      });
-      $content.innerHTML = template;
+      return data.photos;
     }
   } catch (err) {
     console.log(err);
