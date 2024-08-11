@@ -1,14 +1,15 @@
-import TabBar from "./components/TabBar";
-import Content from "./components/Content";
+import TabBar from "./components/TabBar.js";
+import Content from "./components/Content.js";
 import { request } from "./components/api.js";
 
-export default function App() {
+export default function App($app) {
   this.state = {
     currentTab: "all",
     photos: [],
   };
 
   const tabBar = new TabBar({
+    $app,
     initialState: "",
     onClick: async (name) => {
       this.setState({
@@ -23,7 +24,7 @@ export default function App() {
   this.setState = (nextState) => {
     this.state = nextState;
     tabBar.setState(this.state.currentTab);
-    content.setState(this.state.photos);
+    // content.setState(this.state.photos);
   };
 
   const init = async () => {
