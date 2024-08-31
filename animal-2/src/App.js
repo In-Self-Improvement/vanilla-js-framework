@@ -19,7 +19,7 @@ export default function App($app) {
       });
     },
   });
-  const content = new Content();
+  const content = new Content({ $app, initialState: [] });
 
   this.setState = (nextState) => {
     this.state = nextState;
