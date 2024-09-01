@@ -24,7 +24,7 @@ export default function App($app) {
   this.setState = (nextState) => {
     this.state = nextState;
     tabBar.setState(this.state.currentTab);
-    // content.setState(this.state.photos);
+    content.setState(this.state.photos);
   };
 
   const init = async () => {
