@@ -18,7 +18,7 @@ export default function TabBar({ $app, initialState, onClick }) {
         코알라
       </div>
       <div id='panda'>
-        panda
+        판다
       </div>
     `;
   };
